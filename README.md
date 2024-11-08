@@ -49,6 +49,7 @@ alternative way of invoking the `count_all_missing_by_group()`: piping
 the dataset into the function.
 
 ``` r
+library(RuiCountMissing)
 airquality |> count_all_missing_by_group(Month) 
 #> # A tibble: 5 × 6
 #>   Month Ozone Solar.R  Wind  Temp   Day
@@ -68,6 +69,7 @@ grouped tibble, rather than the ungrouped tibble output of the earlier
 examples.
 
 ``` r
+library(RuiCountMissing)
 count_all_missing_by_group(airquality, Month, .groups = "keep")
 #> # A tibble: 5 × 6
 #> # Groups:   Month [5]
